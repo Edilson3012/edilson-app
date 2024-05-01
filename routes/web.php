@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PortifolioController;
 use App\Http\Controllers\TemplateOneController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,3 +20,5 @@ Route::get('/', function () {
 });
 
 Route::get('template-one', [TemplateOneController::class, 'index'])->name('template-one.index');
+Route::get('portifolio', [PortifolioController::class, 'index'])->name('portifolio.index');
+Route::get('portifolio-details', [PortifolioController::class, 'portifolioDetails'])->name('portifolio.portifolioDetails');
